@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kFoWdb0KmTtHiMsjQ+0kxEI5pt7L6tR12ex1PqIzEfqc61QYeAMZe6yLB6EfAHOcheZB2qBrae/ZjP+hbEpfLA==",
+  "dgSpecHash": "jXpgQEn7CHStkKLOAqMcI8813kL8IKwaN5KrulRHZDF3wJs3c2XsY0L0QQ1QlKrtHVOtmTbuZsbvhDj0fDbfxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gusta\\Estudo\\RestWithASPNETUdemy\\RestWithASPNet\\RestWithASPNet\\RestWithASPNet.csproj",
+  "projectFilePath": "C:\\Users\\gusta\\Estudo\\practicingCode\\RestWithASPNet\\RestWithASPNet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\gusta\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

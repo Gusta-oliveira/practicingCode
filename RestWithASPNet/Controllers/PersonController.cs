@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using RestWithASPNet.Models;
 using RestWithASPNet.Services;
 using System.Reflection.Metadata.Ecma335;
 
@@ -24,7 +25,7 @@ namespace RestWithASPNet.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Sub(long id)
+        public IActionResult GetById(long id)
         {
             var person = _personService.FindById(id);
             if (person == null) return NotFound("Usuário não encontrado");
@@ -32,82 +33,29 @@ namespace RestWithASPNet.Controllers
             return Ok(person);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            _personService.Delete(id);
+            return Ok(true);
+        }
 
+        [HttpPut("{id}")]
+        public IActionResult Update([FromBody] Person person)
+        {
+            if (person == null) return BadRequest("Informações não registrada");
+            var personUpdating = _personService.Update(person);
 
+            return Ok(personUpdating);
+        }
 
-        //[HttpGet("mult/{firsNumber}&{secondNumber}")]
-        //public IActionResult Mult(string firstNumber, string secondNumber)
-        //{
-        //    if(IsNumeric(firstNumber) && IsNumeric(secondNumber))
-        //    {
-        //        var mult = ConvertToDecimal(firstNumber) * ConvertToDecimal(secondNumber);
-        //        return Ok(mult.ToString());
-        //    }
-        //    return BadRequest();
-        //}
+        [HttpPost("{id}")]
+        public IActionResult Create([FromBody] Person person)
+        {
+            if (person == null) return BadRequest();
+            var createdPerson = _personService.Create(person);
 
-        //[HttpGet("div/{firsNumber}&{secondNumber}")]
-        //public IActionResult Div(string firstNumber, string secondNumber)
-        //{
-        //    if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
-        //    {
-        //        var first = ConvertToDecimal(firstNumber);
-        //        if(first == 0)
-        //            return BadRequest("Valor informado não pode ser dividido");
-
-        //        var mult =  first/ ConvertToDecimal(secondNumber);
-        //        return Ok(mult.ToString());
-        //    }
-        //    return BadRequest();
-        //}
-
-        //[HttpGet("average/{firsNumber}&{secondNumber}")]
-        //public IActionResult Average(string firstNumber, string secondNumber)
-        //{
-        //    decimal average = 0;
-        //    if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
-        //    {
-        //        average = (ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber)) / 2;
-
-        //        return Ok(average.ToString());
-        //    }
-        //    return BadRequest();
-        //}
-
-        //[HttpGet("sqrt/{firsNumber}")]
-        //public IActionResult Square(string firstNumber)
-        //{
-        //    if (IsNumeric(firstNumber))
-        //    {
-        //        var sqrt = (double)ConvertToDecimal(firstNumber);
-
-        //        Math.Sqrt(sqrt);
-
-        //        return Ok(sqrt.ToString());
-        //    }
-        //    return BadRequest();
-        //}
-
-        //private bool IsNumeric(string number)
-        //{
-        //    double value = 0;
-        //    bool isNumeric = false;
-
-        //    isNumeric = double.TryParse(number, System.Globalization.NumberStyles.Any, System.Globalization.NumberFormatInfo.InvariantInfo, out value);
-
-        //    return isNumeric;
-        //}
-
-        //private decimal ConvertToDecimal(string number)
-        //{
-        //    decimal decimalValue;
-
-        //    if (decimal.TryParse(number, out decimalValue))
-        //    {
-        //        return decimalValue;
-        //    }
-        //    return 0;
-        //}
-
+            return Ok(createdPerson);
+        }
     }
 }

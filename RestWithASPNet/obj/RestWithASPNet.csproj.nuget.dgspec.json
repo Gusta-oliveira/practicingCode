@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gusta\\Estudo\\RestWithASPNETUdemy\\RestWithASPNet\\RestWithASPNet\\RestWithASPNet.csproj": {}
+    "C:\\Users\\gusta\\Estudo\\practicingCode\\RestWithASPNet\\RestWithASPNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gusta\\Estudo\\RestWithASPNETUdemy\\RestWithASPNet\\RestWithASPNet\\RestWithASPNet.csproj": {
+    "C:\\Users\\gusta\\Estudo\\practicingCode\\RestWithASPNet\\RestWithASPNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\Estudo\\RestWithASPNETUdemy\\RestWithASPNet\\RestWithASPNet\\RestWithASPNet.csproj",
+        "projectUniqueName": "C:\\Users\\gusta\\Estudo\\practicingCode\\RestWithASPNet\\RestWithASPNet.csproj",
         "projectName": "RestWithASPNet",
-        "projectPath": "C:\\Users\\gusta\\Estudo\\RestWithASPNETUdemy\\RestWithASPNet\\RestWithASPNet\\RestWithASPNet.csproj",
+        "projectPath": "C:\\Users\\gusta\\Estudo\\practicingCode\\RestWithASPNet\\RestWithASPNet.csproj",
         "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\Estudo\\RestWithASPNETUdemy\\RestWithASPNet\\RestWithASPNet\\obj\\",
+        "outputPath": "C:\\Users\\gusta\\Estudo\\practicingCode\\RestWithASPNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
